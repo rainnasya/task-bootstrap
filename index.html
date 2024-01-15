@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/css/bootstrap.min.css"rel="stylesheet"/>
+
+    <style>
+        .custom-card-img {
+            height: 300px;
+            object-fit: cover;
+        }
+        .custom-card-text {
+            max-height: 3em;
+            overflow: hidden;
+            text-overflow: ellipsis; 
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        .custom-card:hover {
+                transform: scale(1.05); /* Efek scaling saat hover */
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Efek bayangan saat hover */
+        }
+    </style>
+
     <title>Task Bootstrap - Rahmi Rainnasya</title>
 </head>
+
 <body>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-6">
+                <h2>Semua Tentang Kucing</h2>
+                <p class="lead">Jenis-jenis Kucing</p>
+            </div>
+            <hr>
+        </div>
+        <div class="row mt-3">
+            <img src="img/cat2.jpg" class="img-fluid" alt="Responsive image">      
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="row g-3">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card h-100 custom-card">
+                    <img src="img/cat3.jpg" class="card-img-top custom-card-img" alt="Fakta Menarik Kucing">
+                    <div class="card-body">
+                        <h5 class="card-title">Fakta Unik Menarik Tentang Kucing  </h5>
+                        <p class="card-text custom-card-text">Kucing adalah hewan yang mempunyai tubuh fleksibel, sehingga kucing sering dikatakan memiliki sembilan nyawa karena dengan kefleksibelannya kucing bahkan bisa melompat 6 kali lebih tinggi dari ukuran badannya.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card h-100 custom-card">
+                    <img src="img/pakan1.jpeg" class="card-img-top custom-card-img" alt="Pakan Kucing">
+                    <div class="card-body">
+                        <h5 class="card-title">Tips Cara Memilih dan Menyimpan Pakan Hewan Kesayangan</h5>
+                        <p class="card-text custom-card-text">
+                            memilih pakan yang tepat merupakan langkah penting dalam memastikan kesehatan dan kesejahteraannya. </p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card h-100 custom-card">
+                    <img src="img/cat4.jpg" class="card-img-top custom-card-img" alt="Bulu Kucing">
+                    <div class="card-body">
+                        <h5 class="card-title">Mencegah Kerontokan Bulu dan Mengatasi Bau pada Kucing</h5>
+                        <p class="card-text custom-card-text">
+                            Untuk meminimalisir konflik rumah tangga akibat rontoknya bulu kucing, berikut ini adalah beberapa cara yang dapat membantu mengatasi masalah kerontokan pada bulu (sebenarnya terminologi yang benar adalah rambut, bukan bulu) kucing. </p>
+                        </div>
+                    <div class="card-footer">
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
+
+    <div class="container py-5">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Contact Us</h5>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="comment" class="form-label">Comment</label>
+                        <textarea class="form-control" id="comment" name="comment"  required></textarea>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Gender : </label>
+                            <div class="col">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Male
+                                </label>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Female
+                                </label>
+                            </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label"></label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Whats your favorite cat?</option>
+                            <option value="1">What diseases are often experienced by cats?</option>
+                        </select>
+                    </div>          
+
+                    <div class="col-12 text-end">
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="style/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
